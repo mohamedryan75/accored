@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <style>
+        section{
+            margin: 50px 0 0 100px;
+        }
+        button{
+            width: 80%;
+            cursor: pointer;
+            background-color: rgb(81, 81, 238);
+            outline: 0;
+            border: 0;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: azure;
+            padding-right: 5px;
+            padding-left: 5px;
+           
+        }
+        button:hover{
+            background-color: rgb(134, 134, 185);
+        }
+        button::after{
+            content: "+";
+            float: right;
+           
+
+        }
+        .active::after{
+            content: "-";
+        }
+         div{
+            padding: 0 5px 0 5px;
+           width:78.8%;
+           background-color: rgba(68, 90, 131, 0.801);
+           overflow: hidden;
+           max-height: 0;
+           transition: 1s ease-in
+           
+
+           
+        }
+
+    </style>
+    <body><section>
+        <button>accord </button>
+            <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Distinctio, ipsum necessitatibus. 
+                 Reiciendis maxime corporis nihil dignissimos sint alias voluptatem facilis culpa eius, 
+                 sequi voluptatibus rerum ab laborum nemo qui esse nesciunt id dicta,
+                  dolorem fuga cumque quod obcaecati.
+                   Repellendus, possimus.</p>
+        </div>
+   
+       
+        <button>accord </button>
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, ipsum necessitatibus. 
+                    Reiciendis maxime corporis nihil dignissimos sint alias voluptatem facilis culpa eius, 
+                    sequi voluptatibus rerum ab laborum nemo qui esse nesciunt id dicta,
+                     dolorem fuga cumque quod obcaecati.
+                      Repellendus, possimus.</p>
+            </div> 
+       
+        <button>accord </button>
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, ipsum necessitatibus. 
+                    Reiciendis maxime corporis nihil dignissimos sint alias voluptatem facilis culpa eius, 
+                    sequi voluptatibus rerum ab laborum nemo qui esse nesciunt id dicta,
+                     dolorem fuga cumque quod obcaecati.
+                      Repellendus, possimus.</p>
+            </div>
+       
+    </section>
+    </body>
+    <script>
+    const button=document.getElementsByTagName("button");
+    for (let i = 0; i < button.length; i++) {
+        const element = button[i];
+        element.addEventListener("click",e=>{
+            element.classList.toggle("active");
+         const ele=element.nextElementSibling;
+         if (ele.style.maxHeight) {
+             ele.style.maxHeight=null;
+         } else {ele.style.maxHeight=ele.scrollHeight +"px";
+            
+         }
+        })
+        
+    }
+    </script>
+</html>
